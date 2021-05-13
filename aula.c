@@ -4,11 +4,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-/*
-Implemente uma função que receba como parâmetro um array de números reais de tamanho N e retorne quantos numeros negativos 
-há nesse array. Essa função deve obedecer ao prototipo: int negativos(float *vet, int N);
-
- */ 
 
 int main(){
     char linha[50];
