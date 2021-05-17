@@ -4,31 +4,54 @@
 #include <string.h>
 #include <stdbool.h>
 
+//*********BANCO DE DADOS***********//
 
-int main(){
-    char arq_origem[30], arq_destino[30];
-    char linha[100];
-    printf("entre com o nome do arq origem\n");
-    scanf("%s", arq_origem);
-    printf("entre com o nome do arq destino\n");
-    scanf("%s", arq_destino);
+typedef struct Aluno
+{
+    char nome[50];
+    char endereco[100];
+    int idade;
+    char cpf[12];
+    float altura;
+    float peso;
+}Aluno;
 
-    FILE *fp= fopen(arq_origem, "r");
-    FILE *fpDest= fopen(arq_destino, "w");
+void cadastro(Aluno *luno){
+    printf("entre com o nome do aluno\n");
+    scanf("%s", aluno->nome);
+    printf("entre com o endereco\n");
+    scanf(" %[^\n]s", aluno->endereco);
+    printf("entre com o idade\n");
+    scanf("%d", &aluno->idade);
+    printf("entre com o endereco\n");
+    scanf("%s", aluno->cpf);
+    printf("entre com a altura\n");
+    scanf("%f", &aluno->altura);
+    printf("entre com o peso\n");
+    scanf("%f", &aluno->peso);
+    fflush(stdin);//FRESCURA DO PROFESSOR
+    printf("pressione um tecla para continuar...");//FRESCURA DO PROFESSOR
+    getchar();//FRESCURA DO PROFESSOR
+    system("cls");//FRESCURA DO PROFESSOR
 
-    if (fp==NULL){
-        printf("erro na aberura do aqrquivo");
-        return -1;
+}
 
-    }
-    while (fgets(linha, 100, fp)!=NULL){
-        char *tmp = strtok (linha, ",.;:?!\n\r\t");
-        while(tmp != NULL){
-            fprintf(fpDest, "%s\n", tmp);
-            tmp = strtok(NULL, ",.:;?!\n\r\t");
-        }
-    }
-    fclose(fp);
-    fclose(fpDest);
+
+int main()
+{
+    struct Aluno a1;
+    printf("entre com o nome do aluno\n");
+    scanf("%s", &a1.nome);
+    printf("entre com o endereco\n");
+    scanf(" %[^\n]s", &a1.endereco);
+    printf("entre com o idade\n");
+    scanf("%d", &a1.idade);
+    printf("entre com o endereco\n");
+    scanf("%s", &a1.cpf);
+    printf("entre com a altura\n");
+    scanf("%f", &a1.altura);
+    printf("entre com o peso\n");
+    scanf("%f", &a1.peso);
+
     return 0;
 }
