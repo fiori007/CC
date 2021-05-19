@@ -16,7 +16,7 @@ typedef struct Aluno
     float peso;
 }Aluno;
 
-void cadastro(Aluno *luno){
+void cadastro(Aluno *aluno){
     printf("entre com o nome do aluno\n");
     scanf("%s", aluno->nome);
     printf("entre com o endereco\n");
@@ -52,6 +52,6 @@ int main()
     scanf("%f", &a1.altura);
     printf("entre com o peso\n");
     scanf("%f", &a1.peso);
-
+//khjljlk
     return 0;
 }
